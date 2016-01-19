@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xml:lang="en"
+    lang="en"
+    dir="ltr"> 
+<head> 
+<title>PyMyAdmin 0.001</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head> 
+<body>
+
+<h1>PyMyAdmin Menu</h1>
+
+<form name="input" action="./pymyadmin.py" method="post">
+
+<div>AUTHENTICATION</div>
+Login: <input type="text" name="user" value=""> 
+<br>
+Password: <input type="password" name="password" value=""> 
+<br><br>
+
+<div>DATABASES</div>
+<input type="radio" name="dbact" value="create"> CREATE
+<br>
+<input type="radio" name="dbact" value="drop"> DROP
+<br>
+Database name: <input type="text" name="dbname" value="">
+<br><br>
+
+<div>TABLES</div>
+<input type="radio" name="tbact" value="create"> CREATE
+<br>
+<input type="radio" name="tbact" value="drop"> DROP
+<br>
+Database name: <input type="text" name="tbdbname" value="">
+<br>
+Table name: <input type="text" name="tbname" value="">
+<br><br>
+
+<div>QUERIES</div>
+<input type="radio" name="qact" value="select"> SELECT
+<br>
+<input type="radio" name="qact" value="insert"> INSERT
+<br>
+Database name: <input type="text" name="qdbname" value="">
+<br>
+Table name: <input type="text" name="qtbname" value="">
+<br>
+Columns (comma-separated): <input type="text" name="columns" value="">
+<br>
+Values (comma-separated): <input type="text" name="values" value="">
+<br>
+Calculations: <select name="calc">
+    <option value="COUNT">COUNT</option>
+    <option value="SUM">SUM</option>
+    <option value="MAX">MAX</option>
+    <option value="MIN">MIN</option>
+    <option value="AVG">AVG</option>
+</select>
+(<input type="text" name="colkey" value="">)
+<br>
+DISTINCT? 
+<input type="radio" name="distinct" value="yes">Yes 
+<input type="radio" name="distinct" value="no">No
+<br>
+Sorting: <select name="sort">
+    <option value="ORDER BY">ORDER BY</option>
+    <option value="GROUP BY">GROUP BY</option>
+</select>
+<input type="text" name="key" value="">
+<br><br>
+
+<div>USER ADMINISTRATION</div>
+<input type="radio" name="uact" value="create"> CREATE
+<br>
+<input type="radio" name="uact" value="drop"> DROP
+<br>
+<input type="radio" name="uact" value="grant"> GRANT
+<br>
+<input type="radio" name="uact" value="revoke"> REVOKE
+<br>
+User name: <input type="text" name="username" value="">
+<br>
+Password: <input type="password" name="passwd" value="">
+<br>
+Privileges (comma-separated): <input type="text" name="privileges" value="">
+<br>
+Database and Table: <input type="text" name="acldb" value="">.<input type="text" name="acltb" value="">
+<br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html> 
+
+
+
+
